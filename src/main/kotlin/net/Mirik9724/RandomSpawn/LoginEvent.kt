@@ -15,17 +15,20 @@ class LoginEvent : Listener {
     @EventHandler
     fun onPlayerRespawn(event: org.bukkit.event.player.PlayerRespawnEvent) {
         val player = event.player
-        val random = java.util.Random()
 
-        val range = spawnRadius * 2 + 1
-        val x = random.nextInt(range) - spawnRadius
-        val z = random.nextInt(range) - spawnRadius
+        if (player.getBedSpawnLocation() == null) {
+            val random = java.util.Random()
 
-        val world = player.world
-        val y = world.getHighestBlockYAt(x, z)
+            val range = spawnRadius * 2 + 1
+            val x = random.nextInt(range) - spawnRadius
+            val z = random.nextInt(range) - spawnRadius
 
-        val respawnLocation = org.bukkit.Location(world, x.toDouble() + 0.5, y.toDouble(), z.toDouble() + 0.5)
+            val world = player.world
+            val y = world.getHighestBlockYAt(x, z)
 
-        event.respawnLocation = respawnLocation
+            val respawnLocation = org.bukkit.Location(world, x.toDouble() + 0.5, y.toDouble(), z.toDouble() + 0.5)
+
+            event.respawnLocation = respawnLocation
+        }
     }
 }
