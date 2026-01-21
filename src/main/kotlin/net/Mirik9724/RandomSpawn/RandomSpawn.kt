@@ -57,7 +57,7 @@ class RandomSpawn : JavaPlugin() {
         }
 
         if(data["checkUpdates"] == "true"){
-            if(isAvailableNewVersion("https://raw.githubusercontent.com/Ender-Vanilla-Studios/TempLogin/refs/heads/master/V?token=GHSAT0AAAAAADQV66S4EQENEJPIP45RGP4O2LPLUJA", this.description.version) == true){
+            if(isAvailableNewVersion("https://raw.githubusercontent.com/Ender-Vanilla-Studios/RandomSpawn/refs/heads/master/V", this.description.version) == true){
                 getLogger().info("New version available")
             }
         }
