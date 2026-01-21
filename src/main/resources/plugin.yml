@@ -1,0 +1,11 @@
+name: RandomSpawn
+version: '${version}'
+main: net.Mirik9724.RandomSpawn.RandomSpawn
+prefix: RS
+load: STARTUP
+authors: [ Mirik9724 ]
+description: Plugin adds random spawn for mc 1.1+
+website: https://github.com/Ender-Vanilla-Studios/RandomSpawn
+commands:
+  spawn:
+    usage: /spawn

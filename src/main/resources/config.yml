@@ -1,0 +1,5 @@
+metric: true
+checkUpdates: true
+
+spawnRadius: 1000
+useSpawnCommand: true
